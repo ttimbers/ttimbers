@@ -1,0 +1,38 @@
+---
+title: "Reproducible presentations"
+author: "Tiffany Timbers"
+date: 2019-06-10
+categories: ["R"]
+tags: ["R Markdown", "communication", "Jupyter", "reproducibility", "presentations"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# Reproducible presentations
+## *why and what tools?*
+
+Reproducible reports, a single document contains both the code needed to create figures and tables as well as the written narrative that tells the story of the analysis (e.g., Jupyter notebooks and R Markdown reports), are gaining buy-in traction in the Data Science community due to fact that they allow for re-creation an analysis from beginning to end, and because they help make an analysis tranparent or auditable. Reproducible presentation tools, however, are less well known. Many Data Scientists and researchers that value reprodcuibility are still using the more commonly known what you see is what you get (WYSWYG) presentation tools (e.g., Power Point, Keynote, Google Slides, etc), perhaps because until vert recently the reproducible presentation tools were less mature in terms of visual appeal and the ability to be used in collaboration with others who are not familar with things like Markdown or LaTeX syntax. This blog post aims to motivate those currently not using reproducible presentation tools to try one out, and guide them in their choice of tool based on their intended use case.
+
+Before I dig into the tools, I will first try to answer why I recommend reproducible presentations? At first glance they seem like much more work... And yes, sometimes they are, for example if it is just a one off presentation that you will never re-use ever again. But if it is a presentation you might re-use, or your analysis might change (and hence your figures and tables in the presentation might change) then in the long run this actually saves you time. In my career, I too started out creating presentations using Power Point and Keynote. However, when I was working on a long project with large tables and many figures, with several presentations along the way at various stages in the analysis I realized how much time I was wasting copying and pasting figures and tables from my re-run analysis into Power Point/Keynote and I got very sad and thought there has to be a better way... Through the Software Carpentry community I learned about using reproducible presentation tools, which like reproducible reports automatically update tables and figures when you render the presentation. Once I switched to reproducible presentations for these sorts of projects I saved a lot of time overall (and made a lot less copy-paste mistakes). Additionally, these tools made my presentations auditable and transparent - it was clear where my tables and figures came from. 
+
+## Options for tools for reproducible presentations
+
+Below I list and comment on several reproducible presentation tools that I do (or would) use, as well as comment on which tool to choose based on the intended use case.
+
+1. **[Jupyter Rise slides](https://rise.readthedocs.io/en/5.2.0/)**
+
+If you are familiar with Jupyter notebooke, then I would suggest that these are the easiest to use, but there is a cost that they are the least flexible in terms of styling. I like that you get to render each slide/cell as you create the presentation using the run buttons in Jupyter. It's also really easy and smooth to transition from the slide presentation view to the notebook view and back. I like them when I have presentations where I want to run and edit code on the fly. So great for teaching Data Science in the classroom, but I am less likely to use these at a conference or in a boardroom presentation.
+
+2. **[Xaringan R Markdown slides](https://github.com/yihui/xaringan)**
+
+These are only slightly more challenging to use compared to Jupyter Rise slides, however, they have a lot more options in terms of styling, and the defaults are quite zen and easy on the eye. For creating and editing the slides, there is now a new feature that you can see live updates of the slides using the viewer using the `xaringan::inf_mr()` function (see [demo here](https://yihui.name/en/2019/02/ultimate-inf-mr/)). This is currently my go to presentation platform at a conference or in a boardroom presentation.
+
+3. **[R Markdown to Power point slides](https://support.rstudio.com/hc/en-us/articles/360004672913-Rendering-PowerPoint-Presentations-with-RStudio))**
+
+This is a newer tool that I have not yet to try, but that looks very interesting that let's you render from R Markdown to Powerpoint. This default styling of this tool may not be as beautiful/zen as Xaringan but has the added benefit(?) that as you slide deck gets circulated up in an organization your supervisors/bosses/C-level execs can edit it. 
+
+4. **[Markdown to Google slides](https://github.com/gsuitedevs/md2googleslides)**
+
+This tool let's you render from R Markdown to Google Slides (whose default is more beautiful/zen than Power point). This means that again you get reproducible slides which give you a WYSWYG (what you see is what you get) platform to share upwards with less technically savvy folks. Would be nice to see this be an option out of R Markdown (so that code could be run and rendered within one doc), but that does not yet seem to be a tool that exists (open source project anyone????). So with this one, I would write an R/Python notebook/script to generate and save my figures and tables and the import them into the markdown doc using file paths.
