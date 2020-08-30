@@ -26,12 +26,16 @@ subtitle = ""
     tag = "*"
   
   [[content.filter_button]]
-    name = "Deep Learning"
-    tag = "Deep Learning"
+    name = "R packages"
+    tag = "R packages"
+    
+  [[content.filter_button]]
+    name = "Learning Technology"
+    tag = "Learning Technology"
   
   [[content.filter_button]]
-    name = "Other"
-    tag = "Demo"
+    name = "Books"
+    tag = "Books"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
