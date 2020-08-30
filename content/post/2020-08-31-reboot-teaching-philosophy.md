@@ -1,13 +1,21 @@
 ---
 title: "Rebooting my teaching philosophy"
 author: "Tiffany Timbers"
-date: 2020-08-30
-tags: ["Teaching Philosophy", "education", "data science"]
+date: '2020-08-30'
+slug: reboot-teaching-philosophy
+categories: []
+tags: []
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-08-30T14:35:05-07:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
-```
 
 After teaching data science for several years, and through a global pandemic, I have decided to reboot my teaching philosophy. Here's draft one... Comments/feedback welcome.
 

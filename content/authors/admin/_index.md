@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: I am an Instructor in the Department of Statistics and an Option Co-Director for the Master of Data Science program at the of Univerity of British Columbia. In these roles I teach and develop curriculum around the the responsible application of Data Science to solve real-world problems. One of her favourite courses she teaches is a graduate course on collaborative software development, which focuses on teaching how to create Python packages using modern tools and workflows.
+bio: I am an Instructor in the Department of Statistics and an Option Co-Director for the Master of Data Science program at the of Univerity of British Columbia. In these roles I teach and develop curriculum around the the responsible application of Data Science to solve real-world problems. 
 education:
   courses:
   - course: Postdoc in Data Science Education
@@ -46,6 +46,6 @@ user_groups:
 - Visitors
 ---
 
-Tiffany Timbers is an Instructor in the Department of Statistics and an Option Co-Director for the Master of Data Science program at the of British Columbia. In these roles she teaches and develops curriculum around the responsible application of Data Science to solve real-world problems. 
+Tiffany Timbers is an Assistant Professor of Teaching in the Department of Statistics and an Co-Director for the Master of Data Science program (Vancouver Option) at the University of British Columbia. In these roles she teaches and develops curriculum around the responsible application of Data Science to solve real-world problems. One of her favourite courses she teaches is a graduate course on collaborative software development, which focuses on teaching how to create Python packages using modern tools and workflows.
 
 
