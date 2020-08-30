@@ -1,6 +1,6 @@
 ---
-title: "Rebooting my teaching philosophy"
-author: "Tiffany Timbers"
+title: Rebooting my Teaching Philosophy
+author: ~
 date: '2020-08-30'
 slug: reboot-teaching-philosophy
 categories: []
@@ -8,7 +8,7 @@ tags: []
 subtitle: ''
 summary: ''
 authors: []
-lastmod: '2020-08-30T14:35:05-07:00'
+lastmod: '2020-08-30T14:48:04-07:00'
 featured: no
 image:
   caption: ''
