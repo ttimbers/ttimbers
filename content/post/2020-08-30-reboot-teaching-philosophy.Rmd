@@ -1,8 +1,7 @@
 ---
 title: "Rebooting my teaching philosophy"
 author: "Tiffany Timbers"
-date: 2019-06-10
-categories: ["R"]
+date: 2020-08-30
 tags: ["Teaching Philosophy", "education", "data science"]
 ---
 
