@@ -12,7 +12,7 @@ lastmod: '2020-08-30T14:48:04-07:00'
 featured: no
 image:
 - https://cdn.britannica.com/57/19157-050-7C257C1D/Hypatia.jpg
-  caption: 'Hypatia (source:https://www.britannica.com/biography/Hypatia)'
+  caption: 'Hypatia'
   focal_point: ''
   preview_only: no
 projects: []
