@@ -1,5 +1,5 @@
 ---
-date: "2020-08-31"
+date: "2020-08-15"
 external_link: https://py-pkgs.org/
 image:
   caption: py-pkgs
