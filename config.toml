@@ -64,7 +64,3 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
-
-[params]
-  description = "Tiffany Timbers' personal website"
-  images = ["https://pbs.twimg.com/profile_images/1140674492437368832/Frl-lJ21_400x400.png"]

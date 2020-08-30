@@ -10,8 +10,8 @@ summary: ''
 authors: []
 lastmod: '2020-08-30T14:48:04-07:00'
 featured: no
-image: img/hypatia.jpg
-  caption: 'Hypatia'
+image:
+  caption: ''
   focal_point: ''
   preview_only: no
 projects: []
