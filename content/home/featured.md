@@ -62,3 +62,13 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
+
+Ostblom, J., **Timbers, T.A.** (Accepted pending minor revisions). Opinionated practices for teaching reproducibility: motivation, guided instruction and practice. *Journal of Statistics and Data Science Education.* Preprint available: [https://arxiv.org/abs/2109.13656](https://arxiv.org/abs/2109.13656)
+
+Babaian, A., Drögemöller, B., Grande, B.M., Jackman, S.D., Lee, A.H., Lin, S., Loucks, C., Suarez-Gonzalez, A., **Timbers, T.A.** and Wright, G. (2017). hackseq: Catalyzing collaboration between biological and computational scientists via hackathon version 1; referees: awaiting peer review. *F1000 Research*, 6:197. doi: [https://doi.org/10.12688/f1000research.10964.2](https://f1000research.com/articles/6-197/v2)
+
+**Timbers, T.A.**, Garland, S.J., Mohan, S., Flibotte, S., Edgley, M., Muncaster, Q., Au, V., Li-Leger, E., Rosell, F.I., Cai, J., Rademakers, S., Jansen, G., Moerman, D.G. and Leroux, M.R. (2016). Accelerating Gene Discovery by Phenotyping Whole-Genome Sequenced Multi-mutation Strains and Using the Sequence Kernel Association Test (SKAT). *PLoS Genetics* doi: [10.1371/journal.pgen.1006235](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006235)
+
+
+
+
