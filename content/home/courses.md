@@ -32,6 +32,6 @@ I also am available to supervise STAT 548 papers. The available papers are liste
 
 - [Using Team-Based Learning to Teach Data Science](https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1971587)
 - [Reproducibility standards for machine learning in the life sciences](https://www.nature.com/articles/s41592-021-01256-7)
-- [Tools and Recommendations for Reproducible Teaching](https://arxiv.org/abs/2202.09504) by 
+- [Tools and Recommendations for Reproducible Teaching](https://arxiv.org/abs/2202.09504)
 - [Diagnosing Data Analytic Problems in the Classroom](https://www.tandfonline.com/doi/full/10.1080/26939169.2021.1971586)
 - [Truth, Proof, and Reproducibility: There’s No Counter-Attack for the Codeless](https://link.springer.com/chapter/10.1007/978-981-15-1960-4_8)
