@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R packages on Tiffany Timbers</title>
+    <link>https://tiffanytimbers.com/tags/r-packages/</link>
+    <description>Recent content in R packages on Tiffany Timbers</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tiffanytimbers.com/tags/r-packages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>canlang</title>
+      <link>https://tiffanytimbers.com/project/canlang/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/canlang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubccv</title>
+      <link>https://tiffanytimbers.com/project/ubccv/</link>
+      <pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/ubccv/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

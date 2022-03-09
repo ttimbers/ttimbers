@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Tiffany Timbers</title>
+    <link>https://tiffanytimbers.com/tags/</link>
+    <description>Recent content in Tags on Tiffany Timbers</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tiffanytimbers.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books</title>
+      <link>https://tiffanytimbers.com/tags/books/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Learning Technology</title>
+      <link>https://tiffanytimbers.com/tags/learning-technology/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/learning-technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R packages</title>
+      <link>https://tiffanytimbers.com/tags/r-packages/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>communication</title>
+      <link>https://tiffanytimbers.com/tags/communication/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/communication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jupyter</title>
+      <link>https://tiffanytimbers.com/tags/jupyter/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>presentations</title>
+      <link>https://tiffanytimbers.com/tags/presentations/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/presentations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://tiffanytimbers.com/tags/r-markdown/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducibility</title>
+      <link>https://tiffanytimbers.com/tags/reproducibility/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>https://tiffanytimbers.com/tags/research/</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/tags/research/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

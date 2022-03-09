@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Tiffany Timbers</title>
+    <link>https://tiffanytimbers.com/project/</link>
+    <description>Recent content in Projects on Tiffany Timbers</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://tiffanytimbers.com/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>canlang</title>
+      <link>https://tiffanytimbers.com/project/canlang/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/canlang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python Packages</title>
+      <link>https://tiffanytimbers.com/project/pypkgs/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/pypkgs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rudaux</title>
+      <link>https://tiffanytimbers.com/project/rudaux/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/rudaux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubccv</title>
+      <link>https://tiffanytimbers.com/project/ubccv/</link>
+      <pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/ubccv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to Data Science</title>
+      <link>https://tiffanytimbers.com/project/intro-ds/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/intro-ds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Accelerating Gene Discovery by Phenotyping WGS MMP Strains and Using SKAT</title>
+      <link>https://tiffanytimbers.com/project/mmp/</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://tiffanytimbers.com/project/mmp/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

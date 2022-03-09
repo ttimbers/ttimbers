@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Tiffany Timbers">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Reproducible presentations why and what tools? Reproducible reports, a single document contains both the code needed to create figures and tables as well as the written narrative that tells the story of the analysis (e.g., Jupyter notebooks and R Markdown reports), are gaining buy-in traction in the Data Science community due to fact that they allow for re-creation an analysis from beginning to end, and because they help make an analysis tranparent or auditable.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://tiffanytimbers.com/post/2019-06-10-r-rmarkdown/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#ff3860">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.3acf1868962e07a8a332208fd3c2f9f6.css">
+
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://tiffanytimbers.com/post/2019-06-10-r-rmarkdown/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@TiffanyTimbers">
+  <meta property="twitter:creator" content="@TiffanyTimbers">
+  
+  <meta property="og:site_name" content="Tiffany Timbers">
+  <meta property="og:url" content="https://tiffanytimbers.com/post/2019-06-10-r-rmarkdown/">
+  <meta property="og:title" content="Reproducible presentations | Tiffany Timbers">
+  <meta property="og:description" content="Reproducible presentations why and what tools? Reproducible reports, a single document contains both the code needed to create figures and tables as well as the written narrative that tells the story of the analysis (e.g., Jupyter notebooks and R Markdown reports), are gaining buy-in traction in the Data Science community due to fact that they allow for re-creation an analysis from beginning to end, and because they help make an analysis tranparent or auditable."><meta property="og:image" content="https://tiffanytimbers.com/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-06-10T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-06-10T00:00:00&#43;00:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Reproducible presentations | Tiffany Timbers</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Tiffany Timbers</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Reproducible presentations</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-06-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-06-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jun 10, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/r/">R</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Reproducible%20presentations&amp;url=https%3a%2f%2ftiffanytimbers.com%2fpost%2f2019-06-10-r-rmarkdown%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ftiffanytimbers.com%2fpost%2f2019-06-10-r-rmarkdown%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ftiffanytimbers.com%2fpost%2f2019-06-10-r-rmarkdown%2f&amp;title=Reproducible%20presentations"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ftiffanytimbers.com%2fpost%2f2019-06-10-r-rmarkdown%2f&amp;title=Reproducible%20presentations"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Reproducible%20presentations&amp;body=https%3a%2f%2ftiffanytimbers.com%2fpost%2f2019-06-10-r-rmarkdown%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="reproducible-presentations" class="section level1">
+<h1>Reproducible presentations</h1>
+<div id="why-and-what-tools" class="section level2">
+<h2><em>why and what tools?</em></h2>
+<p>Reproducible reports, a single document contains both the code needed to create figures and tables as well as the written narrative that tells the story of the analysis (e.g., Jupyter notebooks and R Markdown reports), are gaining buy-in traction in the Data Science community due to fact that they allow for re-creation an analysis from beginning to end, and because they help make an analysis tranparent or auditable. Reproducible presentation tools, however, are less well known. Many Data Scientists and researchers that value reprodcuibility are still using the more commonly known what you see is what you get (WYSWYG) presentation tools (e.g., Power Point, Keynote, Google Slides, etc), perhaps because until vert recently the reproducible presentation tools were less mature in terms of visual appeal and the ability to be used in collaboration with others who are not familar with things like Markdown or LaTeX syntax. This blog post aims to motivate those currently not using reproducible presentation tools to try one out, and guide them in their choice of tool based on their intended use case.</p>
+<p>Before I dig into the tools, I will first try to answer why I recommend reproducible presentations? At first glance they seem like much more work… And yes, sometimes they are, for example if it is just a one off presentation that you will never re-use ever again. But if it is a presentation you might re-use, or your analysis might change (and hence your figures and tables in the presentation might change) then in the long run this actually saves you time. In my career, I too started out creating presentations using Power Point and Keynote. However, when I was working on a long project with large tables and many figures, with several presentations along the way at various stages in the analysis I realized how much time I was wasting copying and pasting figures and tables from my re-run analysis into Power Point/Keynote and I got very sad and thought there has to be a better way… Through the Software Carpentry community I learned about using reproducible presentation tools, which like reproducible reports automatically update tables and figures when you render the presentation. Once I switched to reproducible presentations for these sorts of projects I saved a lot of time overall (and made a lot less copy-paste mistakes). Additionally, these tools made my presentations auditable and transparent - it was clear where my tables and figures came from.</p>
+</div>
+<div id="options-for-tools-for-reproducible-presentations" class="section level2">
+<h2>Options for tools for reproducible presentations</h2>
+<p>Below I list and comment on several reproducible presentation tools that I do (or would) use, as well as comment on which tool to choose based on the intended use case.</p>
+<ol style="list-style-type: decimal">
+<li><strong><a href="https://rise.readthedocs.io/en/5.2.0/">Jupyter Rise slides</a></strong></li>
+</ol>
+<p>If you are familiar with Jupyter notebooke, then I would suggest that these are the easiest to use, but there is a cost that they are the least flexible in terms of styling. I like that you get to render each slide/cell as you create the presentation using the run buttons in Jupyter. It’s also really easy and smooth to transition from the slide presentation view to the notebook view and back. I like them when I have presentations where I want to run and edit code on the fly. So great for teaching Data Science in the classroom, but I am less likely to use these at a conference or in a boardroom presentation.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong><a href="https://github.com/yihui/xaringan">Xaringan R Markdown slides</a></strong></li>
+</ol>
+<p>These are only slightly more challenging to use compared to Jupyter Rise slides, however, they have a lot more options in terms of styling, and the defaults are quite zen and easy on the eye. For creating and editing the slides, there is now a new feature that you can see live updates of the slides using the viewer using the <code>xaringan::inf_mr()</code> function (see <a href="https://yihui.name/en/2019/02/ultimate-inf-mr/">demo here</a>). This is currently my go to presentation platform at a conference or in a boardroom presentation.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong><a href="https://support.rstudio.com/hc/en-us/articles/360004672913-Rendering-PowerPoint-Presentations-with-RStudio">R Markdown to Power point slides</a>)</strong></li>
+</ol>
+<p>This is a newer tool that I have not yet to try, but that looks very interesting that let’s you render from R Markdown to Powerpoint. This default styling of this tool may not be as beautiful/zen as Xaringan but has the added benefit(?) that as you slide deck gets circulated up in an organization your supervisors/bosses/C-level execs can edit it.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong><a href="https://github.com/gsuitedevs/md2googleslides">Markdown to Google slides</a></strong></li>
+</ol>
+<p>This tool let’s you render from R Markdown to Google Slides (whose default is more beautiful/zen than Power point). This means that again you get reproducible slides which give you a WYSWYG (what you see is what you get) platform to share upwards with less technically savvy folks. Would be nice to see this be an option out of R Markdown (so that code could be run and rendered within one doc), but that does not yet seem to be a tool that exists (open source project anyone????). So with this one, I would write an R/Python notebook/script to generate and save my figures and tables and the import them into the markdown doc using file paths.</p>
+</div>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r-markdown/">R Markdown</a>
+  
+  <a class="badge badge-light" href="/tags/communication/">communication</a>
+  
+  <a class="badge badge-light" href="/tags/jupyter/">Jupyter</a>
+  
+  <a class="badge badge-light" href="/tags/reproducibility/">reproducibility</a>
+  
+  <a class="badge badge-light" href="/tags/presentations/">presentations</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu683f07f2ac94bd93eaf2963cf1c211f7_4419103_250x250_fill_lanczos_center_2.png" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://tiffanytimbers.com/">Tiffany Timbers</a></h5>
+      <h6 class="card-subtitle">Assistant Professor of Teaching in Statistics &amp; Co-Director of the Master of Data Science program (Vancouver Option)</h6>
+      <p class="card-text" itemprop="description">I am an Instructor in the Department of Statistics and an Option Co-Director for the Master of Data Science program at the of Univerity of British Columbia. In these roles I teach and develop curriculum around the the responsible application of Data Science to solve real-world problems.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/TiffanyTimbers" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.ca/citations?hl=en&amp;user=VVcs9DoAAAAJ&amp;view_op=list_works&amp;gmla=AJsN-F4ZXhe8TKWzn5Q1QFTrAuRVdMskvFe7hDEZMDklE7yhJTM3bPZbaHsEgkCVFAnFwx2JKhkKT4BbRkkwwwpCl5HykUMRaZ_xVeqQyx4_zqoGmIzQHtQ" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/ttimbers" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/2017-01-10-r-rmarkdown/">Food for thought on an effective strategy for writing</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script async defer src="//maps.googleapis.com/maps/api/js?key="></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js" integrity="sha256-7vjlAeb8OaTrCXZkCNun9djzuB2owUsaO72kXaFDBJs=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.3394a224b26ce58ff36f44c54743e0ab.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
